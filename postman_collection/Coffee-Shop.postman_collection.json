@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "4aabb488-220b-4287-8f7d-06450da114b3",
+		"name": "Coffee-Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstname\":\"Jaison\",\"mobile\":\"9790234772\",\"email\":\"jaisan45@live.com\",\"password\":\"12345678\",\"confirm_password\":\"12345678\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"jaisan45@live.com\",\"password\":\"12345678\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Wallet Balance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODY3OTUwLCJleHAiOjE2MjQ4NzE1NTAsIm5iZiI6MTYyNDg2Nzk1MCwianRpIjoiUWxaTEFpUENBc3V3d0RQVCIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.EL-qtIQ8YyI7RW3NUsLscdsKlpWbrXwFDcRqCDvYbG4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/wallet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet Deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODY3OTUwLCJleHAiOjE2MjQ4NzE1NTAsIm5iZiI6MTYyNDg2Nzk1MCwianRpIjoiUWxaTEFpUENBc3V3d0RQVCIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.EL-qtIQ8YyI7RW3NUsLscdsKlpWbrXwFDcRqCDvYbG4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"amount\":\"-10\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/wallet/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"wallet",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODg0NzkzLCJleHAiOjE2MjQ4ODgzOTMsIm5iZiI6MTYyNDg4NDc5MywianRpIjoidGZsQ3NCSWN2YkRnUkx4NiIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.ZHxayOEboqfi68-GEtc8M_bZsL6sA_DjE7q9GK87pa0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/userprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"userprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Profile Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODg0NzkzLCJleHAiOjE2MjQ4ODgzOTMsIm5iZiI6MTYyNDg4NDc5MywianRpIjoidGZsQ3NCSWN2YkRnUkx4NiIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.ZHxayOEboqfi68-GEtc8M_bZsL6sA_DjE7q9GK87pa0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"first_name\":\"Jaisan\",\"last_name\":\"V\",\"mobile\":\"9876543210\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/updateprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"updateprofile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODg0NzkzLCJleHAiOjE2MjQ4ODgzOTMsIm5iZiI6MTYyNDg4NDc5MywianRpIjoidGZsQ3NCSWN2YkRnUkx4NiIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.ZHxayOEboqfi68-GEtc8M_bZsL6sA_DjE7q9GK87pa0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODg0NzkzLCJleHAiOjE2MjQ4ODgzOTMsIm5iZiI6MTYyNDg4NDc5MywianRpIjoidGZsQ3NCSWN2YkRnUkx4NiIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.ZHxayOEboqfi68-GEtc8M_bZsL6sA_DjE7q9GK87pa0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"product_id\":\"1\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Orders",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODg0NzkzLCJleHAiOjE2MjQ4ODgzOTMsIm5iZiI6MTYyNDg4NDc5MywianRpIjoidGZsQ3NCSWN2YkRnUkx4NiIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.ZHxayOEboqfi68-GEtc8M_bZsL6sA_DjE7q9GK87pa0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/myorders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"myorders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2NvZmZlZS1zaG9wXC9hcGlcL2xvZ2luIiwiaWF0IjoxNjI0ODg4NTI5LCJleHAiOjE2MjQ4OTIxMjksIm5iZiI6MTYyNDg4ODUyOSwianRpIjoieGlyWndPR1hyVGpESEJZViIsInN1YiI6MywicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.QjRFpBkO7dfJvBNj_9ZHcGOqMaDkb8mX4ggXV3abWhc",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/coffee-shop/api/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"coffee-shop",
+						"api",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
